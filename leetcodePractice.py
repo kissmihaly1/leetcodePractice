@@ -43,7 +43,6 @@ class Day1:
             for char in s:
                 number += translations[char]
             return number
-    print(romantointeger13(s="XX"))
 
 
 class Day2:
@@ -74,6 +73,24 @@ class Day3:
         return a
 
 
+class Day4:
+    #66. Plus One
+    def plusOne(digits: List[int]) -> List[int]:
+        result = []
+        number = 0
+        val = 0
 
+        if len(digits) == 1:
+            result = [digits[0] + 1]
+            return result
 
+        for i in range(len(digits)):
+            number = digits[i]
+            val = val * 10 + number
 
+        val += 1
+        result = [int(x) for x in str(val)]
+
+        return result
+
+    print(plusOne(digits=[1, 2, 3, 4]))
