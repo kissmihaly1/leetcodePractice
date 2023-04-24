@@ -95,4 +95,47 @@ class Day4:
 
         return result
 
-    print(plusOne(digits=[9]))
+    # print(plusOne(digits=[9]))
+
+
+class Day5_apr22:
+    # 191. Number of 1 Bits
+    def hammingWeight(n: int) -> int:
+        count = 0
+        while n != 0:
+            if n & 1 == 1:
+                count += 1
+            n = n >> 1
+        return count
+
+    # hammingWeight(1010)
+
+
+class Day6_apr23:
+    # 1046. Last Stone Weight
+    def lastStoneWeight(stones: List[int]) -> int:
+        while len(stones)>=2:
+            first = 0
+            for i in stones:
+                if i > first:
+                    first = i
+            stones.remove(first)
+            second = 0
+            for i in stones:
+                if i > second:
+                    second = i
+            stones.remove(second)
+            if first > second:
+                first -= second
+                stones.append(first)
+
+            print(stones)
+            print(len(stones))
+        if len(stones)==1:
+            return stones[0]
+        else:
+            return 0
+    lastStoneWeight(stones=[1,3])
+
+
+class Day7_apr24:
