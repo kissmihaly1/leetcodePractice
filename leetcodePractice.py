@@ -114,7 +114,7 @@ class Day5_apr22:
 class Day6_apr23:
     # 1046. Last Stone Weight
     def lastStoneWeight(stones: List[int]) -> int:
-        while len(stones)>=2:
+        while len(stones) >= 2:
             first = 0
             for i in stones:
                 if i > first:
@@ -131,11 +131,22 @@ class Day6_apr23:
 
             print(stones)
             print(len(stones))
-        if len(stones)==1:
+        if len(stones) == 1:
             return stones[0]
         else:
             return 0
-    lastStoneWeight(stones=[1,3])
+    # lastStoneWeight(stones=[1,3])
 
 
 class Day7_apr24:
+    def removeDuplicates(s: str) -> str:
+        result = []
+        for letter in s:
+            result.append(letter)
+            if len(result) > 1 and result[-1] == result[-2]:
+                result.pop()
+                result.pop()
+
+        return "".join(result)
+
+    print(removeDuplicates(s="abbaca"))
