@@ -179,6 +179,6 @@ class Day9_apr26:
     #434. Number of Segments in a String
     def countSegments(s: str) -> int:
         slist = list(s.split(" "))
-        print(slist, len(slist), slist.count(" "))
-        return (len(slist) - slist.count(" "))
+        #print(slist, len(slist), slist.count(""))
+        return (len(slist) - slist.count(""))
     #print(countSegments("Hello, my name is john"))
