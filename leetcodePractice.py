@@ -182,3 +182,10 @@ class Day9_apr26:
         #print(slist, len(slist), slist.count(""))
         return (len(slist) - slist.count(""))
     #print(countSegments("Hello, my name is john"))
+
+
+class Day10_apr27:
+    #258. Add Digits
+    def addDigits(num: int) -> int:
+
+    print(addDigits(38))
